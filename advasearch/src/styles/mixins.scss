@@ -1,0 +1,12 @@
+// MIXIN // FONT "INTER"
+
+@mixin font-inter($weight: 400, $size: 1rem, $kerning: -0.5px, $lineHeight: 1) {
+	font-family: 'Inter', sans-serif;
+	font-optical-sizing: auto;
+	font-size: $size;
+	line-height: $lineHeight;
+	letter-spacing: $kerning;
+	font-weight: $weight;
+	font-style: normal;
+	font-variation-settings: 'slnt' 0;
+}

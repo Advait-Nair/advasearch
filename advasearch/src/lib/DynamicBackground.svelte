@@ -1,0 +1,82 @@
+<script lang="ts">
+    let noImages = 30;
+    let currentURI = getRandomImageURI();
+    let lastURI = currentURI;
+    let appear = true;
+
+    function getRandomImageURI():string {
+        return '/images/photo_' + Math.floor(Math.random() * noImages) + '.jpg';
+    }
+
+    import { onMount, onDestroy } from 'svelte';
+
+    let interval: any | null = null;
+
+    onMount(() => {
+        interval = setInterval(() => {
+            lastURI = currentURI;
+            currentURI = getRandomImageURI();
+        }, 5000);
+    });
+
+    onDestroy(() => {
+        clearInterval(interval);
+    });
+
+</script>
+
+<div class="background">
+    <div class="image-transitioner">
+        <img src={lastURI} alt="background" class="background-image" />
+    </div>
+    {#key currentURI}
+    <div class="image-transitioner" class:appear>
+        <img src={currentURI} alt="background" class="background-image" />
+    </div>
+    {/key}
+</div>
+
+<style lang="scss">
+	.background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: -1;
+
+        img, .image-transitioner {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-transitioner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .appear {
+            animation: appear 2s ease-in-out forwards;
+        }
+
+        @keyframes appear {
+            0% {
+                opacity: 0;
+                transform: scale(1.1);
+                filter: blur(10px);
+                -webkit-filter: blur(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                -webkit-filter: blur(0);
+                filter: blur(0);
+            }
+        }
+    }
+</style>

@@ -1,0 +1,58 @@
+{
+    "domains": {
+        "g": {
+            "DefaultBehaviour": "https://www.google.com/search?q=$$",
+            "cweb": "https://chrome.google.com/webstore/search/$$",
+            "play": "https://play.google.com/store/search?q=$$",
+            "fonts": "https://fonts.google.com/?query=$$",
+            "maps": "https://www.google.com/maps/search/$$",
+            "news": "https://news.google.com/search?q=$$",
+            "books": "https://www.google.com/search?q=$$&tbm=bks",
+            "drive": "https://drive.google.com/drive/search?q=$$",
+            "photos": "https://photos.google.com/search/$$",
+            "cal": "https://calendar.google.com/calendar/r/search?q=$$",
+            "docs": {
+                "DefaultBehaviour": "https://docs.google.com/document/u/0/?q=$$",
+                "new": "https://docs.new"
+            },
+            "sheets": "https://docs.google.com/spreadsheets/u/0/?q=$$",
+            "slides": "https://docs.google.com/presentation/u/0/?q=$$",
+            "forms": "https://docs.google.com/forms/u/0/?q=$$"
+
+        },
+        "d": "https://duckduckgo.com/?q=$$",
+        "b": "https://www.bing.com/search?q=$$",
+        "y": "https://search.yahoo.com/search?p=$$",
+        "yt": "https://www.youtube.com/results?search_query=$$",
+        "w": "https://en.wikipedia.org/w/index.php?search=$$",
+        "am": "https://www.amazon.com/s?k=$$",
+        "eb": "https://www.ebay.com/sch/i.html?_nkw=$$",
+        "r": "https://www.reddit.com/search/?q=$$",
+        "tw": "https://twitter.com/search?q=$$",
+        "fb": "https://www.facebook.com/search/top/?q=$$",
+        "ig": "https://www.instagram.com/explore/tags/$$",
+        "p": "https://www.pinterest.com/search/pins/?q=$$",
+        "t": "https://www.tumblr.com/search/$$",
+        "li": "https://www.linkedin.com/search/results/all/?keywords=$$",
+        "gh": "https://github.com/search?q=$$",
+        "so": "https://stackoverflow.com/search?q=$$",
+        "mdn": "https://developer.mozilla.org/en-US/search?q=$$",
+        "npm": "https://www.npmjs.com/search?q=$$",
+        "pypi": "https://pypi.org/search/?q=$$",
+
+        "appstore": "https://apps.apple.com/us/app/$$",
+        "imdb": "https://www.imdb.com/find?q=$$",
+        "rotten": "https://www.rottentomatoes.com/search?search=$$",
+        "metacritic": "https://www.metacritic.com/search/all/$$",
+
+
+        "stm": "https://store.steampowered.com/search/?term=$$",
+
+        "rbx": {
+            "DefaultBehaviour": "https://www.roblox.com/search?q=$$",
+            "u": "https://www.roblox.com/search/users?keyword=$$",
+            "g": "https://www.roblox.com/search/groups?keyword=$$",
+            "e": "https://www.roblox.com/discover/?Keyword=$$"
+        }
+    }
+}
