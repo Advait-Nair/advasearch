@@ -1,10 +1,10 @@
 <script lang="ts">
+    let lastRandom:number;
     let noImages = 29;
     let currentURI = getRandomImageURI();
     let lastURI = currentURI;
     let appear = true;
 
-    let lastRandom:number;
     function getRandomImageURI():string {
         let random = Math.floor(Math.random() * noImages)
         while (lastRandom == random) {

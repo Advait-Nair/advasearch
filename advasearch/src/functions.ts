@@ -26,7 +26,7 @@ export function getDate(customDate?: Date) {
 }
 
 export function getVersion(): string {
-    return 'v1.0.0'
+    return 'v2.1.0'
 }
 
 // RichText processing Functions

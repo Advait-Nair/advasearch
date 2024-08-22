@@ -214,7 +214,7 @@
 }
 
     .wrap {
-        width: 100%;
+        max-width: calc(100svw - 1rem);
         width: 45rem;
         height: calc(4rem + 2px);
         font-size: 2rem;

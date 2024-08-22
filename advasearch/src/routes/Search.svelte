@@ -64,8 +64,10 @@
 <style lang="scss">
     .logo-large {
         margin-bottom: 2rem;
+        max-width: 98svw;
         height: 6.5rem;
         width: 26.3519795661rem;
+        object-fit:contain;
     }
     .top-text {
         font-size: 1rem;
