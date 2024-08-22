@@ -1,6 +1,6 @@
 <script lang="ts">
     let lastRandom:number;
-    let noImages = 29;
+    let noImages = 116;
     let currentURI = getRandomImageURI();
     let lastURI = currentURI;
     let appear = true;
