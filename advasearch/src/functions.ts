@@ -26,7 +26,7 @@ export function getDate(customDate?: Date) {
 }
 
 export function getVersion(): string {
-    return 'v2.1.0'
+    return 'v2.2.0'
 }
 
 // RichText processing Functions
@@ -70,6 +70,7 @@ function autocompleteNamespace(dobj:DomainObject, str:string, trailingWhitespace
 
 
 function nbsp(str:string) {
+	if(!str) return ''
 	if (str.trim().length == 0) return '';
 	return str.replaceAll(' ', '&nbsp;');
 }
@@ -344,7 +345,12 @@ export function processInput(dobj:DomainObject, nv: string): RichOutput {
 			// else {
 			// }
 		}  else {
-			pinputArray[1] = pinputArray[1]?.replace(FunctionCall, RichText(FunctionCall, 'term'));
+			let remaining = '';
+			for (let i = 1; i < tokens.length; i++) {
+				remaining += tokens[i] + ' ';
+				pinputArray[i] = pinputArray[i].replace(tokens[i], RichText(tokens[i], 'term'));
+			}
+			// pinputArray[1] = pinputArray[1]?.replace(FunctionCall, RichText(FunctionCall, 'term'));
 		}
 	}
 
@@ -513,6 +519,7 @@ export function generateTargetURI(dobj:DomainObject, processedInput:string): URI
 
 
 	// generic search with default
+	console.log(DomainNamespace, fn, subq, term)
 	if (!DomainNamespace) {
 		// @ts-ignore
 		URI = dobj.domains['g'].DefaultBehaviour;
@@ -538,7 +545,12 @@ export function generateTargetURI(dobj:DomainObject, processedInput:string): URI
 			// no subfunction
 			if (!subq) {
 				// @ts-ignore
-				URI = dobj.domains[DomainNamespace][fn].DefaultBehaviour;
+				let rf = dobj.domains[DomainNamespace][fn];
+				if (typeof rf === 'string') {
+				URI = rf;
+				} else {
+				URI = rf.DefaultBehaviour;
+				}
 				terms = term;
 			}
 			// subfunction
@@ -554,10 +566,16 @@ export function generateTargetURI(dobj:DomainObject, processedInput:string): URI
 
 	if (URI)
 		if (subq && !terms) conflict = true;
-	if (URI)
-		if (URI.includes('$$') && !terms) conflict = true;
+	// if (URI)
+	// 	if (URI.includes('$$') && !terms) conflict = true;
 	if (URI)
 		if (!URI.includes('$$') && !terms) conflict = false;
+
+	// undefined -> ''
+	if (!terms) terms = '';
+	if (!fn) fn = '';
+	if (!subq) subq = '';
+
 	
 	if (Object.values(obj).join(' ').trim().length == 0) conflict = false;
 	

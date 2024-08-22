@@ -27,6 +27,7 @@
         value = e.target.value.replaceAll('  ', ' ').replaceAll('. ', ' ');
         richOutput = processInput(packJSONData, value);
         generatedURI = richOutput.generatedURI;
+        console.log(generatedURI)
         suggestions = richOutput.autocomplete;
         suggestionsFormatted = richOutput.autocompleteFormatted;
         conflict = richOutput.conflict
