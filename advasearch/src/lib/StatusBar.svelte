@@ -40,7 +40,7 @@
     <!-- <Container> -->
         <div class="status-bar flex space-between">
             <div class="flex left-flex left-align flex-col">
-                <img src="/three_strike_white.png" alt="logo" class="logo scaled-logo" />
+                <img draggable="false" src="/three_strike_white.png" alt="logo" class="logo scaled-logo" />
             </div>
             <div class="time flex right-flex right-align flex-col">
                 <div class="currentTime">{currentTime}</div>

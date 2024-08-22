@@ -4,11 +4,11 @@
     const dispatch = createEventDispatcher();
 
     export let icon = '';
-
+    export let blur = false;
 
 </script>
 
-<button class="flex center-flex" on:click={() => dispatch('click')}>
+<button class:blur class="flex center-flex" on:click={() => dispatch('click')}>
     {#if icon.trim() != ''}
         <span class="material-symbols-outlined">
             {icon}

@@ -1,11 +1,16 @@
 <script lang="ts">
-    let noImages = 30;
+    let noImages = 29;
     let currentURI = getRandomImageURI();
     let lastURI = currentURI;
     let appear = true;
 
+    let lastRandom:number;
     function getRandomImageURI():string {
-        return '/images/photo_' + Math.floor(Math.random() * noImages) + '.jpg';
+        let random = Math.floor(Math.random() * noImages)
+        while (lastRandom == random) {
+            random = Math.floor(Math.random() * noImages)
+        }
+        return '/images/photo_' + random + '.jpg';
     }
 
     import { onMount, onDestroy } from 'svelte';
@@ -27,11 +32,11 @@
 
 <div class="background">
     <div class="image-transitioner">
-        <img src={lastURI} alt="background" class="background-image" />
+        <img draggable="false" src={lastURI} alt="background" class="background-image" />
     </div>
     {#key currentURI}
     <div class="image-transitioner" class:appear>
-        <img src={currentURI} alt="background" class="background-image" />
+        <img draggable="false" src={currentURI} alt="background" class="background-image" />
     </div>
     {/key}
 </div>

@@ -8,7 +8,7 @@
 </script>
 
 <div class="flex center-flex flex-col splash-container" class:out={$done}>
-	<img src="/three_strike.png" alt="Three Strike" />
+	<img draggable="false" src="/three_strike.png" alt="Three Strike" />
 	<div class="bottom-info flex flex-col center-flex">
 		<p class="version">{getVersion()}</p>
 		<p class="copyright">Copyright Adva Group, Advait Nair © 2024</p>

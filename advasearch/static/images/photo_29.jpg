@@ -1,9 +1,0 @@
-echo "Renaming photos alphanumerically"
-
-declare -i i=0
-for file in *
-do
-mv $file photo_$i.jpg
-i+=1
-done
-
