@@ -1,0 +1,85 @@
+{
+	"version": "2.2.0",
+	"version_name": "alpha",
+	"background_color": "#000000",
+	"description": "Adva Search | Simple, elegant and powerful. Search the web with ease.",
+	"author": "Advait Nair",
+	"developer": {
+		"name": "Advait Nair",
+		"url": "https://advaitnair.netlify.app"
+	},
+	"dir": "ltr",
+	"display": "fullscreen",
+	"name": "Adva Search",
+	"orientation": "natural",
+	"scope": "/",
+	"short_name": "Search",
+	"start_url": "/",
+	"theme_color": "#000000",
+	"categories": ["productivity", "utilities", "lifestyle"],
+
+	"icons": [
+		{
+			"src": "../icon_1024.png",
+			"sizes": "1024x1024",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "../icon_1024.png",
+			"sizes": "1024x1024",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "../icon_1024.png",
+			"sizes": "1024x1024",
+			"type": "image/png",
+			"purpose": "monochrome"
+		},
+		{
+			"src": "../icon_512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "../narrow.png",
+			"form_factor": "narrow",
+			"type": "image/png",
+			"sizes": "388x846"
+		},
+		{
+			"src": "../wide.png",
+			"form_factor": "wide",
+			"type": "image/png",
+			"sizes": "1271x941"
+		}
+	],
+	"shortcuts": [
+		{
+			"name": "Home",
+			"url": "/",
+			"description": "Search",
+			"icons": [
+				{
+					"src": "../icon_1024.png",
+					"sizes": "1024x1024",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "../icon_1024.png",
+					"sizes": "1024x1024",
+					"type": "image/png",
+					"purpose": "maskable monochrome"
+				}
+			]
+		}
+	],
+	"id": "id_1",
+	"lang": "en",
+	"display-override": ["window-controls-overlay", "fullscreen"]
+}

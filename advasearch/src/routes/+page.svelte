@@ -17,9 +17,9 @@
 
 
     onMount(() => {
-        setTimeout(() => {
+        // setTimeout(() => {
             $loaded = true;
-        }, 500);
+        // }, 500);
     });
 
 </script>

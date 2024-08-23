@@ -1,0 +1,14 @@
+
+{
+    "chrome_url_overrides": {
+        "newtab": "newTabOverride.html"
+    },
+    "manifest_version": 3,
+    "name": "Adva Search | Simple, Elegant & Powerful Start Page",
+    "description": "Adva Search provides a simple, elegant & powerful start page",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "favicon.png"
+    }
+}
